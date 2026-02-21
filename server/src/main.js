@@ -80,7 +80,7 @@ function serveStatic(req, res, baseDir) {
 }
 
 // ── WebSocket Server ──────────────────────────────────────────
-const wss = new WebSocketServer({ server: httpServer });
+const wss = new WebSocketServer({ server: httpServer, path: "/ws" });
 
 wss.on("connection", (socket) => {
   const playerId = `p${nextId++}`;

@@ -8,9 +8,10 @@ export class NetworkClient {
     this.handler = handler;
 
     // In dev: Vite proxies /ws -> ws://localhost:8080
-    // In prod: same origin
+    // In prod behind Apache: /ptf/ws is proxied to Node
     const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-    this.url = `${protocol}//${window.location.host}/ws`;
+    const basePath = window.location.pathname.replace(/\/[^/]*$/, "");
+    this.url = `${protocol}//${window.location.host}${basePath}/ws`;
   }
 
   connect() {
