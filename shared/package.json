@@ -1,0 +1,9 @@
+{
+  "name": "@ptfv2/shared",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  }
+}

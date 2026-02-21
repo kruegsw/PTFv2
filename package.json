@@ -1,0 +1,17 @@
+{
+  "name": "ptfv2",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev --workspace @ptfv2/server\" \"npm run dev --workspace @ptfv2/client\"",
+    "build": "npm run build --workspace @ptfv2/client",
+    "start": "node server/src/main.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

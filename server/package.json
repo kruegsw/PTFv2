@@ -1,0 +1,13 @@
+{
+  "name": "@ptfv2/server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/main.js",
+    "start": "node src/main.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "@ptfv2/shared": "*"
+  }
+}

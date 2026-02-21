@@ -1,0 +1,16 @@
+{
+  "name": "@ptfv2/client",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "phaser": "^3.87.0",
+    "@ptfv2/shared": "*"
+  },
+  "devDependencies": {
+    "vite": "^6.3.0"
+  }
+}
